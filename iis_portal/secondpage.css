@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  background-image: url("Images/PTUadmin1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gan {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+
+
+
+.dp {
+  display: flex;
+  flex-direction: row;
+}
+
+.rowwise {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-top: 40px;
+}
+
+main.table {
+  width: 65vw;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  box-shadow: 0 0.4rem 0.8rem #0005;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.table_header {
+  width: 100%;
+  height: 15%;
+  background-color: #fff4;
+  padding: 0.8rem 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table_body::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.table_body::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #0004;
+  visibility: hidden;
+}
+
+.table_body:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.search-wrapper {
+  position: relative;
+  padding: 0 0.1rem 0 0.8rem;
+  background-color: #fff5;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  margin-right: 15px;
+}
+
+.search-wrapper img {
+  position: absolute;
+  top: 0px;
+  right: 12px;
+  width: 2.3rem;
+  height: 2.3rem;
+}
+
+.search-wrapper:hover {
+  width: 30%;
+  background-color: #fff8;
+  box-shadow: 0 0.1rem 0.4rem #0002;
+}
+.search-input {
+  width: 100%;
+  padding: 0 0.5rem 0 0.3rem;
+  background-color: #fff5;
+  border: none;
+  outline: none;
+}
+
+tbody tr td,
+tbody tr td p {
+  transition: 0.2s ease-in-out;
+}
+
+tbody tr.hide td,
+tbody tr.hide td p {
+  padding: 0;
+  font: 0 / 0 sans-serif;
+  transition: 0.2s ease-in-out 0.5s;
+}
+
+tbody tr {
+  --delay: 0.1s;
+  transition: 0.5s ease-in-out var(--delay), background-color 0s;
+}
+
+tbody tr.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.table_body {
+  width: 95%;
+  height: auto;
+  background-color: #fffb;
+  margin: 0.8rem auto;
+  border-radius: 0.6rem;
+
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th {
+  border-collapse: collapse;
+  padding: 1rem;
+  text-align: center;
+}
+
+td {
+  padding: 0.3rem;
+  text-align: center;
+}
+
+.fixTableHead {
+  overflow-y: auto;
+  height: 410px;
+  width: 100%;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #d5d1defe;
+  cursor: pointer;
+  text-transform: capitalize;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #0000000b;
+}
+
+tbody tr:hover {
+  background-color: #fff6;
+}
+
+.status {
+  padding: 0.2rem 0;
+  border-radius: 2rem;
+  text-align: center;
+}
+
+.status.passed {
+  margin-top: 7px;
+  background-color: #86e49d;
+  color: #006b21;
+  margin-bottom: 11px;
+}
+
+.status.failed {
+  margin-top: 7px;
+  background-color: #d893a3;
+  color: #b30021;
+  margin-bottom: 11px;
+}
+
+.status.absent {
+  margin-top: 7px;
+  background-color: #f2f23c8f;
+  color: #ac7600;
+  margin-bottom: 11px;
+  }
+
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-attachment: fixed;
+}
+
+section .box {
+  position: relative;
+  max-width: 600px;
+  padding: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  color: #000;
+  border-radius: 10%;
+  background-color: rgba(255, 255, 255, 0.267);
+}
+
+section .box:before {
+  content: " ";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: rgba(255, 255, 255, 0.5);
+  background-attachment: fixed;
+  filter: blur(4px);
+}
+
+section .box h4 {
+  /* color: #dddbcd; */
+  position: relative;
+  margin: 0 0 20px;
+  padding-left: 20px;
+  font-size: 32px;
+  text-overflow: uppercase;
+  z-index: 2;
+}
+
+section .box p {
+  /* color: #dddbcd; */
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.dp2 {
+  margin-left: 50px;
+  /* width:52vw; */
+  height: 60vh;
+  margin-bottom: 90px;
+}
+
+.dp4 {
+  margin-left: 80px;
+  margin-top: 50px;
+  /* width:52vw; */
+  height: 60vh;
+}
+
+thead th span.icon-arrow {
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  border: 1.4px solid transparent;
+
+  align-items: center;
+  font-size: 1rem;
+
+  margin-left: 0.5rem;
+  transition: 0.2s ease-in-out;
+}
+
+thead th:hover span.icon-arrow {
+  border: 1.4px solid #6c00bd;
+}
+
+thead th:hover {
+  color: #6c00bd;
+}
+
+thead th.active span.icon-arrow {
+  background-color: #6c00bd;
+  color: #fff;
+}
+
+thead th.asc span.icon-arrow {
+  transform: rotate(180deg);
+}
+
+thead th.active,
+tbody td.active {
+  color: #6c00bd;
+}
+
+
+
+
+
+@media (min-width: 100px) {
+  body {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  section .box {
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 400px) {
+  th {
+    padding-left: 20px;
+  }
+}
+
+
+@media (min-width: 700px) {
+  body {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .dp2 {
+    margin: auto;
+    width: 82vw;
+    height: auto;
+  }
+
+  .search-wrapper img {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .search-wrapper {
+    position: relative;
+    padding: 0 0.1rem 0 0.8rem;
+    background-color: #fff5;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    margin-right: 2px;
+  }
+}
+
+@media (min-width: 960px) {
+  body {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1100px) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  main.table {
+    width: 62vw;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    box-shadow: 0 0.4rem 0.8rem #0005;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 1000px) {
+  main.table {
+    width: 92vw;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    box-shadow: 0 0.4rem 0.8rem #0005;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
